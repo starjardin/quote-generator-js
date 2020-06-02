@@ -67,3 +67,13 @@ You can use whatever resource you need for this project. You can use the interne
 -   Clean code (indentation, comments, clear variables and functions names)
 
 ## Good luck, and happy coding ✨
+
+====================================================
+
+## This is how I solved the problem.
+
+-  First,stored the data in a variable
+and then call them when needed.
+-  I used switch function to check what value is the user entered.
+-  I don't really understand the stuff, still blury.
+-  This is tough but giving up is not the solution. Try harder is write answer. 
