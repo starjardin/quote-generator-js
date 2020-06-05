@@ -27,38 +27,6 @@ console.log(`'${fullQuote}'`);
 // Chose the number of quotes generated, we use peompt for that.
 let number = prompt('Enter a number between 1 to 5 here');
 
-// //Check if number is equal to one quotes equal to firstQoute
-// if (number === "1") {
-//   let firstQuote = (firstSentece[0] + ' ' + secondSentence[0] + ' ' + lastSentence[0]);
-//   console.log(`'${firstQuote}'`);
-// }
-
-// //Check if number is equal to two quotes equal to secondtQoute
-// if (number === "2") {
-//   let secondQuote = (firstSentece[1] +', ' + secondSentence[1] + ', ' + lastSentence[1]);
-//   console.log(`'${secondQuote}'`)
-// }
-// //Check if number is equal to three quotes equal to thirddtQoute
-
-// if (number === "3") {
-//   let thirdQuote = (firstSentece[2] +', ' + secondSentence[2] + ', ' + lastSentence[2]);
-//   console.log(`'${thirdQuote}'`)
-// }
-
-// //Check if number is equal to four quotes equal to fourthQoute
-
-// if (number === "4") {
-//   let secondQuote = (firstSentece[3] +', ' + secondSentence[3] + ', ' + lastSentence[3]);
-//   console.log(`'${secondQuote}'`)
-// }
-
-// //Check if number is equal to five quotes equal to fifhtQoute
-
-// if (number === "5") {
-//   let fithQuote = (firstSentece[4] +', ' + secondSentence[4] + ', ' + lastSentence[4]);
-//   console.log(`'${fithQuote}'`)
-// }
-
 //Using switch methode
 
 switch (number) {
@@ -90,4 +58,60 @@ switch (number) {
     //If the number is not between 0 and 6 This will throw an alert message.
   default:
     console.log(`'Wow not found please try again with a number less than 6'`);
+}
+
+// Choose between two types of quotation generators.
+// so now the idea is to create two sets quotes (2 x 3 arrays) and let the user choose which quote set he prefer
+
+let motivationFirstSentence = [
+  'You shot the stars', 'You are good hurry up', "Don't let it go"
+];
+
+let sadFirstSentence = [
+  "Don't cry", "Tell me if you need help", "You don't you look good"
+];
+
+let motivationSecondSentence = [
+  "you're amazing", "good job Keep it up", "Nice work, fantastic"
+];
+
+let sadSecondSentence = [
+  "It's not the end of the world", "Sorry to here that", "that must be painfull"
+];
+
+let motivationLastSentence = [
+  "You nailed it!!!!", "Wow you're taking the next level!!!", "hahahah great!!!!"
+];
+
+let sadLastSentence = [
+  "be happy", "you're just getting there", "Ohhhh that is not good to hear"
+]
+let choice = prompt('write "motivation" or "sad" here');
+
+if (choice === "motivation") {
+  let random1 = Math.floor(Math.random() * motivationFirstSentence.length);
+  let element1 = motivationFirstSentence[random1];
+
+  let random2 = Math.floor(Math.random() * motivationSecondSentence.length);
+  let element2 = motivationSecondSentence[random2];
+
+  let random3 = Math.floor(Math.random() * motivationLastSentence.length);
+  let element3 = motivationLastSentence[random3];
+
+  let motivationQuote = (element1 + ', ' + element2 + ', ' + element3);
+  console.log(`'${motivationQuote}`);
+  
+}
+if (choice === "sad") {
+  let randomsad1 = Math.floor(Math.random() * sadFirstSentence.length);
+  let elementsad1 = sadFirstSentence[randomsad1];
+
+  let randomsad2 = Math.floor(Math.random() * sadSecondSentence.length);
+  let elementsad2 = sadSecondSentence[randomsad2];
+
+  let randomsad3 = Math.floor(Math.random() * sadLastSentence.length);
+  let elementsad3 = sadLastSentence[randomsad3];
+
+  let sadQuote = (elementsad1 + ', ' + elementsad2 + ', ' + elementsad3);
+  console.log(`'${sadQuote}`);
 }
