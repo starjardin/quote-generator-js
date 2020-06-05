@@ -20,4 +20,7 @@ let randomElement2 = secondSentence[randomNumber2];
 let randomNumber3 = Math.floor(Math.random() * lastSentence.length);
 let randomElement3 = lastSentence[randomNumber3];
 
-console.log(randomElement, randomElement2, randomElement3);
+//This is the full quoteation
+
+let fullQuote = (randomElement + randomElement2 + randomElement3)
+console.log(`'${fullQuote}'`);
