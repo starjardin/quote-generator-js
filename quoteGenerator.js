@@ -24,3 +24,17 @@ let randomElement3 = lastSentence[randomNumber3];
 
 let fullQuote = (randomElement + randomElement2 + randomElement3)
 console.log(`'${fullQuote}'`);
+// Chose the number of quotes generated, we use peompt for that.
+let number = prompt('Enter a number between 1 to 5 here');
+
+// for (let i = 0; i < 5; i++) {
+//   switch(randomNumber1) {
+//     case "1":
+//       let value1 = firstSentece[0]
+//       alert(value1);
+//       break;
+//     case "2":
+//       let value2 = firstSentece[1];
+//       alert(value2)  
+//   }
+// }
