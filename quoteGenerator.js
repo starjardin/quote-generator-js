@@ -28,7 +28,7 @@ console.log(`'${fullQuote}'`);
 let number = prompt('Enter a number between 1 to 5 here');
 //Check if number is equal to one quotes equal to firstQoute
 if (number === "1") {
-  let firsrQuote = (firstSentece[0] + secondSentence[0] + lastSentence[0]);
+  let firsrQuote = (firstSentece[0] + ' ' + secondSentence[0] + ' ' + lastSentence[0]);
   console.log(`'${firsrQuote}'`);
 }
 
