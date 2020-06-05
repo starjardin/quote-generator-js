@@ -10,14 +10,14 @@ let secondSentence = [
 let lastSentence = [
   'Wow!!', 'Good bye', 'See you'
 ]
-
+// Call the peices of sentences radomly
 let randomNumber1 = Math.floor(Math.random() * firstSentece.length);
 let randomElement = firstSentece[randomNumber1];
-console.log(randomElement);
 
 let randomNumber2 = Math.floor(Math.random() * secondSentence.length);
 let randomElement2 = secondSentence[randomNumber2];
-console.log(randomElement2);
-console.log(randomElement, randomElement2);
 
-let randomNumber3 
+let randomNumber3 = Math.floor(Math.random() * lastSentence.length);
+let randomElement3 = lastSentence[randomNumber3];
+
+console.log(randomElement, randomElement2, randomElement3);
