@@ -33,27 +33,27 @@ switch (number) {
   case "1":
     //Check the number is equal to one.
     let firstQuote = (firstSentece[4] +', ' + secondSentence[4] + ', ' + lastSentence[4]);
-    console.log(firstQuote);
+    console.log(`'${firstQuote}'`);
     break;
     //Check if the number is equal to two.
   case "2":
     let secondQuote = (firstSentece[4] +', ' + secondSentence[4] + ', ' + lastSentence[4]);
-    console.log(secondQuote);
+    console.log(`'${secondQuote}'`);
     break;
     //Check if the number is equal to three.
   case "3":
     let thirdQuote = (firstSentece[4] +', ' + secondSentence[4] + ', ' + lastSentence[4]);
-    console.log(thirdQuote);
+    console.log(`'${thirdQuote}'`);
     break;
     //Check if the number is equal to four.
   case "4":
     let fourthQuote = (firstSentece[4] +', ' + secondSentence[4] + ', ' + lastSentence[4]);
-    console.log(fourthQuote);
+    console.log(`'${fourthQuote}'`);
     break;
     //Check if the number is equal to five.
   case "5":
     let fithQuote = (firstSentece[4] +', ' + secondSentence[4] + ', ' + lastSentence[4]);
-    console.log(fithQuote);
+    console.log(`'${fithQuote}'`);
     break;
     //If the number is not between 0 and 6 This will throw an alert message.
   default:
