@@ -23,7 +23,7 @@ let randomElement3 = lastSentence[randomNumber3];
 //This is the full quoteation
 
 let fullQuote = (randomElement + ' ' + randomElement2 + ' ' +  randomElement3)
-console.log(`'${fullQuote}'`);
+// console.log(`'${fullQuote}'`);
 //1. use prompt to ask the user how many times we want to generate a random quote
 //2. check if the prompt give us something between 1 and 5
 //3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
@@ -36,10 +36,24 @@ let number = prompt('How many quotes do you want between one to five');
 if (number >= 1 && number <= 5) {
   for (let i = 0; i < number; i++) {
     const quote = () => {
-      let index = Math.floor(Math.random() * i);
-      let ind = `'${fullQuote[index]}'`;
-      console.log(ind);
-    }
+      let randomNumber3 = Math.floor(Math.random() * lastSentence.length);
+      let randomElement3 = lastSentence[randomNumber3];
+      // console.log(randomElement3)
+
+      let randomNumber1 = Math.floor(Math.random() * firstSentece.length);
+      let randomElement = firstSentece[randomNumber1];
+      // console.log(randomElement);
+
+      let randomNumber2 = Math.floor(Math.random() * secondSentence.length);
+      let randomElement2 = secondSentence[randomNumber2];
+      // console.log(randomElement2);
+
+      let fullQuote = (randomElement + ' ' + randomElement2 + ' ' +  randomElement3);
+
+      console.log(`quote:'${fullQuote}'`);
+      }
     quote();
   }
+} else {
+  alert("not found please try again")
 }
