@@ -28,14 +28,18 @@ console.log(`'${fullQuote}'`);
 //2. check if the prompt give us something between 1 and 5
 //3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
 //4. refactor our code into a function, and put the function call inside the loop
-//4.1 generate random numbers
+//4.1 generate random index numbers
 //4.2 show the generated quotes
 
 
-let number = prompt('Enter a number between 1 and 5 here');
-
-if (number <= 1 && number >= 5) {
-  for (let i = 0; i === number; i++) {
-
+let number = prompt('How many quotes do you want between one to five');
+if (number >= 1 && number <= 5) {
+  for (let i = 0; i < number; i++) {
+    const quote = () => {
+      let index = Math.floor(Math.random() * i);
+      let ind = `'${fullQuote[index]}'`;
+      console.log(ind);
+    }
+    quote();
   }
 }
