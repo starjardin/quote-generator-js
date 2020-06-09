@@ -66,17 +66,28 @@ const sadquote = () => {
 }
 let number = prompt('How many quotes do you want between one to five');
 if (number >= 1 && number <= 5) {
-  let quotationChoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
+  let hoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
   for (let i = 0; i < number; i++) {
-    if (quotationChoice === "1") {
+    if (hoice === "1") {
       console.log(quote())
     }
-    if (quotationChoice === "2") {
+    if (hoice === "2") {
       console.log(sadquote())
     }
   }
 } else {
   while (number < 1 || number > 5) {
     number = prompt('How many quotes do you want between one to five');
+    if (number >= 1 && number <= 5) {
+      let hoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
+      for (let i = 0; i < number; i++) {
+        if (hoice === "1") {
+          console.log(quote())
+        }
+        if (hoice === "2") {
+          console.log(sadquote())
+        }
+      }    
+    }
   }
 }
