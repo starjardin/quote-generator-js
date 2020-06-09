@@ -17,7 +17,7 @@ let sadFirstSentence = [
 ];
 
 let sadSecondSentence = [
-  "It's not the end of the world", "Sorry to here that", "that must be painfull", "No way !!!", "It is will be fine"
+  "It's not the end of the world", "Sorry to here that", "that must be painfull", "No way !!!", "It will be fine"
 ];
 let sadLastSentence = [
   "be happy", "you're just getting there", "Ohhhh that is not good to hear", 'What a pity', "O!!!! gosh"
