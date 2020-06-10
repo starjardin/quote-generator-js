@@ -65,42 +65,45 @@ const sadquote = () => {
   return `quote: '${fullSadquote}'`
 }
 
-const newQuote = () => {
+//Create a function to generate two sources of quotes
+const newQuoteGenerator = () => {
   let number = prompt('How many quotes do you want between one to five');
+  //if the number in the prompt is in between one to five, then do use this code below.
   if (number >= 1 && number <= 5) {
-    let hoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
+    let choice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
+    //For loop to impliment how many quotes to display depends on the users.
     for (let i = 0; i < number; i++) {
-      if (hoice === "1") {
+      //If the number in the second prompt is equal to "1" take the quote from motivatianl quote and if it is equal ti "2" take the quote from sadQuote.
+      if (choice === "1") {
         console.log(quote())
-      }
-      if (hoice === "2") {
+      } else if (choice === "2") {
         console.log(sadquote())
-      }
-    }
-  } else {
-    while (number < 1 || number > 5) {
-      number = prompt('How many quotes do you want between one to five');
-      if (number >= 1 && number <= 5) {
-        let hoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
-        for (let i = 0; i < number; i++) {
-          if (hoice === "1") {
-            console.log(quote())
-          }
-          if (hoice === "2") {
-            console.log(sadquote())
-          }
-        }    
-      }
     }
   }
 }
+// If the number is not between one to five, then do this step again
+  while (number < 1 || number > 5) {
+    let number = prompt('How many quotes do you want between one to five');
+    if (number >= 1 && number <= 5) {
+      let choice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
+      for (let i = 0; i < number; i++) {
+        if (choice === "1") {
+          console.log(quote())
+        }
+        if (choice === "2") {
+          console.log(sadquote())
+        }
+      }
+    }  
+  }
+}
+newQuoteGenerator();
 
-newQuote();
+//This is asking the user wether they still want to continue or to stop
 
 let next = prompt('Do you want to continue "yes" or not "no"');
 if (next === "yes") {
-  newQuote();
+  newQuoteGenerator();
 } else if (next === "no") {
   alert("Ok! see you then, good bye. Did you enjoy the quotes")
 }
-
