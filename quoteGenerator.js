@@ -64,30 +64,36 @@ const sadquote = () => {
   let fullSadquote = (pharse1 + ' ' + phrase2 + ' ' + phrase3)
   return `quote: '${fullSadquote}'`
 }
-let number = prompt('How many quotes do you want between one to five');
-if (number >= 1 && number <= 5) {
+const myQoutes = () => {
   let hoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
-  for (let i = 0; i < number; i++) {
     if (hoice === "1") {
-      console.log(quote())
+      console.log(quote());
     }
     if (hoice === "2") {
-      console.log(sadquote())
+      console.log(sadquote());
     }
   }
-} else {
-  while (number < 1 || number > 5) {
-    number = prompt('How many quotes do you want between one to five');
-    if (number >= 1 && number <= 5) {
-      let hoice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
-      for (let i = 0; i < number; i++) {
-        if (hoice === "1") {
-          console.log(quote())
+
+const newQuote = () => {
+  let number = prompt('How many quotes do you want between one to five');
+    for (let i = 0; i < number; i++) {
+      if (number >= 1 && number <= 5) {
+         myQoutes();
+        } else {
+         while (number < 1 || number > 5) {
+          number = prompt('How many quotes do you want between one to five');
+            if (number >= 1 && number <= 5) {
+              myQoutes();
+          }
         }
-        if (hoice === "2") {
-          console.log(sadquote())
-        }
-      }    
-    }
+     }
   }
+}
+newQuote();
+
+let next = prompt('Do you want to continue "yes" or not "no"');
+if (next === "yes") {
+  newQuote();
+} else if (next === "no") {
+  alert("Ok! see you then, good bye. Did you enjoy the quotes")
 }
