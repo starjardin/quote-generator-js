@@ -15,7 +15,6 @@ let lastSentence = [
 let sadFirstSentence = [
   "Don't cry", "Tell me if you need help", "You don't you look good", "Thats is terrible", "That is no fantastic"
 ];
-
 let sadSecondSentence = [
   "It's not the end of the world", "Sorry to here that", "that must be painfull", "No way !!!", "It will be fine"
 ];
@@ -75,12 +74,12 @@ const newQuoteGenerator = () => {
     for (let i = 0; i < number; i++) {
       //If the number in the second prompt is equal to "1" take the quote from motivatianl quote and if it is equal ti "2" take the quote from sadQuote.
       if (choice === "1") {
-        console.log(quote())
+        console.log(quote());
       } else if (choice === "2") {
-        console.log(sadquote())
+        console.log(sadquote());
+      }
     }
   }
-}
 // If the number is not between one to five, then do this step again
   while (number < 1 || number > 5) {
     let number = prompt('How many quotes do you want between one to five');
@@ -105,5 +104,5 @@ let next = prompt('Do you want to continue "yes" or not "no"');
 if (next === "yes") {
   newQuoteGenerator();
 } else if (next === "no") {
-  alert("Ok! see you then, good bye. Did you enjoy the quotes")
+  alert("Ok! see you then, good bye. Did you enjoy the quotes?");
 }
