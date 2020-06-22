@@ -47,7 +47,7 @@ const quote = () => {
   let randomElement2 = secondSentence[randomNumber2];
 
   let fullQuote = (randomElement + ' ' + randomElement2 + ' ' +  randomElement3);
-  return `quote:'${fullQuote}'`;
+  return `Happy quote:'${fullQuote}'`;
   }
 
 const sadquote = () => {
@@ -61,12 +61,13 @@ const sadquote = () => {
   let phrase3 = sadLastSentence[indexRandom3];
   
   let fullSadquote = (pharse1 + ' ' + phrase2 + ' ' + phrase3)
-  return `quote: '${fullSadquote}'`
+  return `Sad quote: '${fullSadquote}'`
 }
 
 //Create a function to generate two sources of quotes
-const newQuoteGenerator = () => {
-  let number = prompt('How many quotes do you want between one to five');
+let number;
+while (number !== 0) {
+  number = Number(prompt('How many quotes do you want between one to five'));
   //if the number in the prompt is in between one to five, then do use this code below.
   if (number >= 1 && number <= 5) {
     let choice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
@@ -80,29 +81,4 @@ const newQuoteGenerator = () => {
       }
     }
   }
-// If the number is not between one to five, then do this step again
-  while (number < 1 || number > 5) {
-    let number = prompt('How many quotes do you want between one to five');
-    if (number >= 1 && number <= 5) {
-      let choice = prompt('Choose between 1 (motivational) and 2 (sad) quotes');
-      for (let i = 0; i < number; i++) {
-        if (choice === "1") {
-          console.log(quote())
-        }
-        if (choice === "2") {
-          console.log(sadquote())
-        }
-      }
-    }  
-  }
-}
-newQuoteGenerator();
-
-//This is asking the user wether they still want to continue or to stop
-
-let next = prompt('Do you want to continue "yes" or not "no"');
-if (next === "yes") {
-  newQuoteGenerator();
-} else if (next === "no") {
-  alert("Ok! see you then, good bye. Did you enjoy the quotes?");
 }
